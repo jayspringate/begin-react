@@ -2,9 +2,11 @@
 
 var React = require('react');
 
-//player component
+//player name component
 module.exports = React.createClass({
 	render: function() {
-		return <li>{this.props.data.player}</li>
+		return <li>
+		{'Name: ' + this.props.data.name}
+		</li>
 	}
 });

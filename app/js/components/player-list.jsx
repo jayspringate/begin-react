@@ -1,12 +1,16 @@
 'use strict';
 
 var React = require('react');
-var Player = require('./player.jsx');
+var PlayerName = require('./player-name.jsx');
+var PlayerBa = require('./player-ba.jsx');
 
 module.exports = React.createClass({
 	renderPlayers: function() {
 		return this.props.data.map(function(player) {
-			return <Player data={player} />
+			return <section key={player._id}>
+						 <PlayerName data={player}/>
+						 <PlayerBa data={player}/>
+						 </section>
 		});
 	},
 	render: function() {
